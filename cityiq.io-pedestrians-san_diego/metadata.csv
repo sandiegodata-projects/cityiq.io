@@ -1,28 +1,34 @@
-Declare,metatab-latest
-Title,CityIQ Pedestrians
-Description,Walkway locations and pedestrian counts at 15 minute intervals
-Identifier,32fa4683-1f93-43e6-af84-6faee86dabf9
-Name,cityiq.io-pedestrians-san_diego-1
-Dataset,pedestrians
-Origin,cityiq.io
-Time,
-Space,san_diego
-Grain,
-Variant,
-Version,1
-Created,2019-05-15T20:16:07
-Modified,2019-05-31T21:19:37
-""
+Declare,metatab-latest,,,
+Title,San Diego Pedestrian Counts,,,
+Description,Counts of pedestrian traffic from the San Diego CityIQ system,,,
+Identifier,00001378-3738-4255-aed5-aacb296ecb68,,,
+Name,cityiq.io-pedestrians-san_diego-1,,,
+Dataset,pedestrians,,,
+Origin,cityiq.io,,,
+Time,,,,
+Space,san_diego,,,
+Grain,,,,
+Variant,,,,
+Version,1,,,
+Created,2019-06-05T04:46:49,,,
+Modified,2019-06-06T04:42:45,,,
+Giturl,https://github.com/sandiegodata-projects/cityiq.io.git,,,
+,,,,
 Section,Contacts,Email,Organization,Url
-Wrangler,Eric Busboom,eric@sandiegodata.org,San Diego Regional Data Library,http://sandiegodata.org
-""
+Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com
+,,,,
 Section,Documentation,Title,Description,
-Note,This package was automatically created from a CKAN repository,,,
 Documentation,file:README.md,README,,
-""
+,,,,
 Section,References,Name,Description,
-""
+,,,,
 Section,Resources,Name,Description,
-Datafile,http://ds.civicknowledge.org.s3.amazonaws.com/cityio.io/sd-ped-201808.csv.zip,pedestrians,Walkway locations and pedestrian counts at 15 minute intervals.,
-""
-Section,Schema,DataType,AltName,Description
+Datafile,python:pylib#row_generator,pedestrians,Pedestrians,
+,,,,
+Section,Schema,DataType,Description,
+Table,pedestrians,,,
+Table.Column,timestamp,datetime,"Time of event, quantized to 15 minute intervals",
+Table.Column,locationuid,string,Locationuid for the walkway,
+Table.Column,direction,integer,"Direction of pedestrian's travel, in degrees. Only two values per walkway, 180 degrees apart. ",
+Table.Column,speed,number,"Speed of pedestrians, in meters per second",
+Table.Column,count,integer,"Number of pedestrians, per locationuid, per direction. ",

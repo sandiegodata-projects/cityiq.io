@@ -1,3 +1,21 @@
-Counts of pedestrian in walkways, in San Diego, from August 2018 through March 2019, aggregated to 15 minutes.  Use the [CityIQ Assets and Locations dataset](https://data.sandiegodata.org/dataset/sandiego-gov-cityiq_objects) for the geographic positions of the walkways. 
+# City IQ pedestrian Data for San Diego
 
-The original data also has values for counts in each direction of the walkway, and the speed. Unfortunately, the geographic data for the walkways --  lines -- are usually wrong, with many walkways being incorrectly long and poorly positioned. The result is that many of the speed values are much too high, so for this dataset the speed and direction values are dropped. 
+This dataset is pedestrian directions and counts for walkwaks in the San Diego
+CityIQ system. The package includes pedestrian counts for most walkway
+locations in the San Diego CityIQ system, but not all of them. The date range
+for the data is 1 August 2018 to the last full month before the package was
+built. For Version 1, then end date is 1 June 2019.
+
+
+## Building the Source Package 
+
+Before generating this package, you must have scraped all of the events to be
+included in the package. After creating a ``.city-iq.yaml`` configuration file,
+run:
+
+    $ ciq_events -s ped # Scrape the events
+    $ ciq_aggregate ped # Convert JSON to CSV
+    
+The first process ``ciq_events`` may run for several days and consume up to
+300G of disk space. The second process, ``ciq_aggregate`` may run for a few
+hours and consume a few more gigabytes of disk space.
