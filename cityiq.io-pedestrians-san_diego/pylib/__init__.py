@@ -2,6 +2,8 @@
 
 
 import pandas as pd
+import sys
+print('\n'.join(sys.path))
 import cityiq
 
 

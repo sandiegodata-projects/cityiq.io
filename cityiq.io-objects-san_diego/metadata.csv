@@ -1,31 +1,31 @@
-Declare,metatab-latest
-Title,San Diego City IQ Assets and Locations
-Description,All assets types extracted form the San Diego City Iq system
-Identifier,1f8c2ddf-73d6-4777-8442-c5df967c1649
-Name,cityiq.io-objects-san_diego-5
-Dataset,objects
-Origin,cityiq.io
-Time,
-Space,san_diego
-Grain,
-Variant,
-Version,5
-Tag,cityiq
-Created,2019-02-12T05:02:13
-Modified,2019-06-04T20:19:25
-Giturl,https://github.com/sandiegodata-projects/cityiq.io.git
-""
+Declare,metatab-latest,,,
+Title,San Diego City IQ Assets and Locations,,,
+Description,All assets types extracted form the San Diego City Iq system,,,
+Identifier,1f8c2ddf-73d6-4777-8442-c5df967c1649,,,
+Name,cityiq.io-objects-san_diego-5,,,
+Dataset,objects,,,
+Origin,cityiq.io,,,
+Time,,,,
+Space,san_diego,,,
+Grain,,,,
+Variant,,,,
+Version,5,,,
+Tag,cityiq,,,
+Created,2019-02-12T05:02:13,,,
+Modified,2019-06-04T20:19:25,,,
+Giturl,https://github.com/sandiegodata-projects/cityiq.io.git,,,
+,,,,
 Section,Contacts,Email,Organization,Url
 Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com
-""
+,,,,
 Section,Documentation,Title,Description,
 Documentation,file:README.md,README,,
-""
+,,,,
 Section,References,Name,Description,
 Reference,metapack+http://library.metatab.org/sangis.org-roads-sandiego-1.zip#all_roads,sdroads,Roads in San Diego,
 Reference,metapack+http://library.metatab.org/sandiegodata.org-geography-2018.csv#tract_boundaries,tract_boundaries,San Diego tracts and communities,
 Reference,metapack+http://library.metatab.org/sandiegodata.org-geography-2018.csv#sd_community_boundaries,sd_community_boundaries,San Diego tracts and communities,
-""
+,,,,
 Section,Resources,Name,Description,Schema
 Datafile,notebooks/ExtractAssets.ipynb#assets,assets,All assets,
 Datafile,notebooks/ExtractAssets.ipynb#locations,locations,"All locations: walkways, traffic lanes and parking zones",
@@ -37,7 +37,7 @@ Datafile,notebooks/ExtractAssets.ipynb#mics,mics,Microphones,assets
 Datafile,notebooks/ExtractAssets.ipynb#nodes,nodes,Nodes,assets
 Datafile,notebooks/ExtractAssets.ipynb#em_sensors,em_sensors,Electro-magnetic sensors,assets
 Datafile,notebooks/ExtractAssets.ipynb#env_sensors,env_sensors,Environmental sensors,assets
-""
+,,,,
 Section,Schema,DataType,AltName,Description
 Table,assets,,,
 Table.Column,assetUid,string,assetuid,
